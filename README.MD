@@ -5,6 +5,11 @@ ninja -C build
 ninja -C build install
 ```
 
+## install meson and ninja
+```
+apt-get install meson
+```
+
 
 GStreamer 1.19.x development series
 
