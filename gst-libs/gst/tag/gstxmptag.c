@@ -969,6 +969,16 @@ _init_xmp_tag_map (gpointer user_data)
   schema = gst_xmp_schema_new ();
   _gst_xmp_schema_add_simple_mapping (schema, GST_TAG_USER_RATING,
       "xmp:Rating", GstXmpTagTypeSimple, NULL, deserialize_xmp_rating);
+
+  /* Avilon patch start */
+  _gst_xmp_schema_add_simple_mapping (schema, "Pitch",
+      "xmp:Pitch", GstXmpTagTypeSimple, NULL, NULL);
+  _gst_xmp_schema_add_simple_mapping (schema, "Roll",
+      "xmp:Roll", GstXmpTagTypeSimple, NULL, NULL);
+  _gst_xmp_schema_add_simple_mapping (schema, "Yaw",
+      "xmp:Yaw", GstXmpTagTypeSimple, NULL, NULL);
+  /* Avilon patch end */
+
   _gst_xmp_add_schema ("xap", schema);
 
   /* tiff */
