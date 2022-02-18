@@ -1,4 +1,4 @@
-### How to build and install
+# How to build and install
 ```
 meson build
 ninja -C build
